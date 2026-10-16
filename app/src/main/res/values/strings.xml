@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Quản lý chi tiêu</string>
+    <string name="login_subtitle">Đăng nhập để tiếp tục</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="username_hint">Nhập tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="password_hint">Nhập mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="login_empty">Vui lòng nhập tên đăng nhập và mật khẩu</string>
+    <string name="login_incorrect">Sai tên đăng nhập hoặc mật khẩu</string>
+    <string name="sample_account">Tài khoản mẫu: admin / 123456</string>
+    <string name="currency_symbol">₫</string>
+    <string name="total_spent">Tổng số tiền đã chi</string>
+    <string name="expense_list">Danh sách khoản chi</string>
+    <string name="expense_list_hint">(nhấn vào một khoản chi để xem chi tiết)</string>
+    <string name="empty_list">Chưa có khoản chi nào</string>
+    <string name="add_expense_button">+  Thêm khoản chi</string>
+    <string name="add_expense">Thêm khoản chi</string>
+    <string name="expense_name">Tên khoản chi</string>
+    <string name="expense_name_hint">Ví dụ: Ăn trưa</string>
+    <string name="expense_amount">Số tiền (VNĐ)</string>
+    <string name="expense_amount_hint">Chỉ nhập số, ví dụ: 45000</string>
+    <string name="expense_category">Danh mục</string>
+    <string name="expense_date">Ngày chi tiêu</string>
+    <string name="expense_note">Ghi chú</string>
+    <string name="expense_note_hint">Nhập ghi chú (không bắt buộc)…</string>
+    <string name="save_expense">Lưu khoản chi</string>
+    <string name="expense_name_required">Vui lòng nhập tên khoản chi</string>
+    <string name="expense_amount_invalid">Số tiền phải lớn hơn 0</string>
+    <string name="expense_detail">Chi tiết khoản chi</string>
+    <string name="back">Quay lại</string>
+    <string name="delete_expense">Xóa khoản chi</string>
+    <string name="delete_confirm_title">Xác nhận xóa</string>
+    <string name="delete_confirm_message">Bạn có chắc chắn muốn xóa khoản chi này không?</string>
+    <string name="cancel">Hủy</string>
+    <string name="confirm_delete">Xóa</string>
+
+    <string-array name="expense_categories">
+        <item>Ăn uống</item>
+        <item>Đi lại</item>
+        <item>Học tập</item>
+        <item>Giải trí</item>
+        <item>Khác</item>
+    </string-array>
+</resources>

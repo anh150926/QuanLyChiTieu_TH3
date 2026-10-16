@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_background">
+
+    <include layout="@layout/system_status_bar" />
+    <include layout="@layout/toolbar_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card chi tiết khoản chi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="320dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/background_card">
+
+                <TextView
+                    android:id="@+id/text_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_detail_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/expense_red"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/border" />
+
+                <!-- Danh mục -->
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/expense_category" />
+
+                <TextView
+                    android:id="@+id/text_detail_category"
+                    style="@style/DetailValue"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <!-- Ngày chi tiêu -->
+                <TextView
+                    style="@style/DetailLabel"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/expense_date" />
+
+                <TextView
+                    android:id="@+id/text_detail_date"
+                    style="@style/DetailValue" />
+
+                <!-- Ghi chú -->
+                <TextView
+                    style="@style/DetailLabel"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/expense_note" />
+
+                <TextView
+                    android:id="@+id/text_detail_note"
+                    style="@style/DetailValue" />
+            </LinearLayout>
+
+            <!-- Nút Quay lại -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_return"
+                style="@style/ExpenseButton"
+                android:layout_marginTop="24dp"
+                android:text="@string/back"
+                android:background="@drawable/background_button_outline"
+                android:textColor="@color/primary" />
+
+            <!-- Nút Xóa khoản chi -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_delete_expense"
+                style="@style/ExpenseButton"
+                android:layout_marginTop="12dp"
+                android:text="@string/delete_expense"
+                android:background="@drawable/background_button_delete" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/system_navigation_bar" />
+</LinearLayout>

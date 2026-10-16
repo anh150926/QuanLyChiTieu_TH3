@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_background">
+
+    <include layout="@layout/system_status_bar" />
+    <include layout="@layout/toolbar_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:focusableInTouchMode="true">
+
+            <!-- Tên khoản chi -->
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/expense_name" />
+
+            <EditText
+                android:id="@+id/edit_expense_name"
+                style="@style/ExpenseInput"
+                android:hint="@string/expense_name_hint"
+                android:inputType="textCapSentences"
+                android:importantForAutofill="no"
+                android:imeOptions="actionNext" />
+
+            <!-- Số tiền -->
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/expense_amount" />
+
+            <EditText
+                android:id="@+id/edit_expense_amount"
+                style="@style/ExpenseInput"
+                android:hint="@string/expense_amount_hint"
+                android:inputType="number"
+                android:importantForAutofill="no"
+                android:imeOptions="actionDone" />
+
+            <!-- Danh mục -->
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/expense_category"
+                android:labelFor="@id/spinner_category" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/background_input">
+
+                <Spinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown" />
+            </FrameLayout>
+
+            <!-- Ngày chi tiêu -->
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/expense_date"
+                android:labelFor="@id/date_expense" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/background_card">
+
+                <DatePicker
+                    android:id="@+id/date_expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:spinnersShown="true" />
+            </FrameLayout>
+
+            <!-- Ghi chú -->
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/expense_note" />
+
+            <EditText
+                android:id="@+id/edit_expense_note"
+                style="@style/ExpenseInput"
+                android:layout_height="76dp"
+                android:singleLine="false"
+                android:gravity="top|start"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:inputType="textMultiLine"
+                android:hint="@string/expense_note_hint"
+                android:importantForAutofill="no" />
+
+            <!-- Nút Lưu khoản chi -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_save_expense"
+                style="@style/ExpenseButton"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/save_expense" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/system_navigation_bar" />
+</LinearLayout>
